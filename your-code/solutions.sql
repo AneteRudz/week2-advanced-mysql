@@ -1,5 +1,9 @@
 ## Challenge 1 - Most Profiting Authors
 
+'''
+L.S. Good!
+'''
+
 ### Step 1: Calculate the royalties of each sales for each author
 CREATE TEMPORARY TABLE temp_sales_royalty
 SELECT titleauthor.title_id, titleauthor.au_id, (titles.price * sales.qty * (titles.royalty/100)*(titleauthor.royaltyper/100)) AS sales_royalty
@@ -28,7 +32,9 @@ ORDER BY profit DESC
 LIMIT 3;
 
 
-
+'''
+L.S. Well done!
+'''
 ## Challenge 2 - Alternative Solution
 
 SELECT titleauthor.au_id, sum(titles.advance + sub_2.sum_royalties) AS profit
@@ -52,6 +58,9 @@ GROUP BY titleauthor.au_id
 ORDER BY profit DESC
 LIMIT 3;
 
+'''
+L.S. Correct use of the join! Very good! 
+'''
 
 ## Challenge 3 - create a permanent table
 
